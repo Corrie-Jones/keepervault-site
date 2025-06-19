@@ -2,88 +2,131 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Pick Your Industry</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KeeperVault • Pick Your Industry</title>
+
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 2rem;
-      background-color: #f5f5f5;
+    /* ——— GLOBAL ——— */
+    :root{
+      --bg-dark:#000;            /* page background   */
+      --panel:#f8f8f4;           /* soft-pearl panels */
+      --accent:#a088ff;          /* violet accent     */
+      --text-dark:#1a1a1a;
     }
-    h1 {
-      text-align: center;
-      color: #4B0082;
+    *{box-sizing:border-box; margin:0; padding:0;}
+    body{
+      background:var(--bg-dark);
+      color:#eee;
+      font:400 16px/1.5 "Segoe UI",Tahoma,Geneva,Verdana,sans-serif;
+      padding:2rem 1rem 4rem;
     }
-    .columns {
-      display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 2rem;
+    h1{
+      text-align:center;
+      font-size:2rem;
+      color:var(--accent);
+      margin-bottom:2.5rem;
+      letter-spacing:.05em;
     }
-    .column {
-      flex: 1;
-      min-width: 300px;
-      background: #fff;
-      padding: 1rem;
-      border-radius: 10px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+
+    /* ——— GRID CONTAINER ——— */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+      gap:2rem;
+      max-width:1220px;
+      margin:0 auto;
     }
-    h2 {
-      color: #800080;
-      border-bottom: 2px solid #800080;
-      padding-bottom: 0.5rem;
+
+    /* ——— CATEGORY PANEL ——— */
+    .panel{
+      background:var(--panel);
+      border-radius:12px;
+      padding:1.5rem 1.25rem;
+      box-shadow:0 0 18px rgba(255,255,255,.08);
+      color:var(--text-dark);
     }
-    ul {
-      list-style: none;
-      padding: 0;
+    .panel h2{
+      font-size:1.2rem;
+      margin-bottom:.75rem;
+      border-bottom:2px solid var(--accent);
+      padding-bottom:.3rem;
+      display:flex;
+      align-items:center;
+      gap:.4rem;
     }
-    li {
-      margin-bottom: 0.5rem;
+    .panel ul{list-style:none; margin-top:.3rem;}
+    .panel li{
+      padding:.35rem 0;
+      line-height:1.4;
     }
-    li::before {
-      content: "• ";
-      color: #800080;
-      font-weight: bold;
-    }
+
+    /* ——— LINK STYLES (future-proof) ——— */
+    a{color:inherit; text-decoration:none;}
+    a:hover{color:var(--accent);}
   </style>
 </head>
+
 <body>
-  <h1>Pick Your Industry</h1>
-  <div class="columns">
-    <div class="column">
-      <h2>Law Enforcement</h2>
+  <h1>Pick&nbsp;Your&nbsp;Industry</h1>
+
+  <div class="grid">
+
+    <!-- 1 — Law Enforcement -->
+    <section class="panel">
+      <h2>🚓 Law Enforcement</h2>
       <ul>
-        <li>Police Department</li>
-        <li>Sheriff’s Office</li>
-        <li>SWAT / Tactical</li>
-        <li>FBI</li>
-        <li>DOJ</li>
-        <li>DEA</li>
+        <li>Police Departments</li>
+        <li>Sheriff’s Offices</li>
+        <li>State Troopers</li>
+        <li>SWAT / Tactical Units</li>
+        <li>FBI</li><li>DEA</li><li>ATF</li>
         <li>Game Wardens</li>
         <li>DOT Enforcement</li>
       </ul>
+    </section>
 
-      <h2>Education</h2>
+    <!-- 2 — Security & Defense -->
+    <section class="panel">
+      <h2>🛡️ Security &amp; Defense</h2>
+      <ul>
+        <li>Defense Contractors</li>
+        <li>Strategic &amp; Covert Systems</li>
+        <li>Military Bases</li>
+        <li>National Guard</li>
+        <li>Private Security Firms</li>
+        <li>Intelligence Ops</li>
+        <li>Black-Ops Units</li>
+      </ul>
+    </section>
+
+    <!-- 3 — Healthcare -->
+    <section class="panel">
+      <h2>🏥 Healthcare</h2>
+      <ul>
+        <li>Hospitals</li><li>VA Facilities</li>
+        <li>Home Health</li><li>Hospice</li>
+        <li>Nursing Homes</li>
+        <li>Mental Health Centers</li>
+        <li>Rehab Clinics</li>
+      </ul>
+    </section>
+
+    <!-- 4 — Education -->
+    <section class="panel">
+      <h2>🎓 Education</h2>
       <ul>
         <li>Public Schools</li>
         <li>Charter Schools</li>
         <li>Universities</li>
         <li>Community Colleges</li>
-        <li>Trade Schools</li>
+        <li>Trade &amp; Vocational</li>
+        <li>Online Academies</li>
       </ul>
+    </section>
 
-      <h2>Healthcare</h2>
-      <ul>
-        <li>Hospitals</li>
-        <li>Home Health</li>
-        <li>Hospice</li>
-        <li>Nursing Homes</li>
-        <li>VA Facilities</li>
-        <li>Mental Health Centers</li>
-      </ul>
-
-      <h2>Transportation</h2>
+    <!-- 5 — Transportation -->
+    <section class="panel">
+      <h2>🚚 Transportation</h2>
       <ul>
         <li>Airports</li>
         <li>Trucking Fleets</li>
@@ -91,57 +134,91 @@
         <li>Bus Lines</li>
         <li>Logistics Hubs</li>
       </ul>
+    </section>
 
-      <h2>Shipping</h2>
+    <!-- 6 — Shipping -->
+    <section class="panel">
+      <h2>⚓ Shipping &amp; Maritime</h2>
       <ul>
         <li>Shipping Yards</li>
-        <li>Ship Carriers</li>
         <li>Container Ports</li>
+        <li>Ship Carriers</li>
+        <li>Freight Forwarders</li>
       </ul>
-    </div>
+    </section>
 
-    <div class="column">
-      <h2>Government</h2>
+    <!-- 7 — Fuel & Energy -->
+    <section class="panel">
+      <h2>⛽ Fuel &amp; Energy</h2>
       <ul>
-        <li>Municipal Offices</li>
-        <li>Courts</li>
-        <li>DMV / Licensing</li>
-        <li>Public Works</li>
+        <li>Fuel Stations</li>
+        <li>Propane Suppliers</li>
+        <li>Oil Rigs &amp; Platforms</li>
+        <li>Refineries</li>
+        <li>Energy Distribution</li>
+        <li>Fuel Transport Logistics</li>
       </ul>
+    </section>
 
-      <h2>Security & Defense</h2>
+    <!-- 8 — Retail -->
+    <section class="panel">
+      <h2>🛒 Retail</h2>
       <ul>
-        <li>Military Bases</li>
-        <li>Defense Contractors</li>
-        <li>Private Security</li>
-        <li>Strategic & Covert Systems</li>
-        <li>National Guard</li>
+        <li>Chain Stores</li>
+        <li>Department Stores</li>
+        <li>Convenience Stores</li>
+        <li>Franchise Operators</li>
+        <li>Online Retailers</li>
       </ul>
+    </section>
 
-      <h2>Technology</h2>
+    <!-- 9 — Food Industry -->
+    <section class="panel">
+      <h2>🍔 Food&nbsp;Industry</h2>
+      <ul>
+        <li>Restaurants</li>
+        <li>Fast-Food Chains</li>
+        <li>Distribution Warehouses</li>
+        <li>Supermarkets</li>
+        <li>Farm Supply Chains</li>
+      </ul>
+    </section>
+
+    <!-- 10 — Technology -->
+    <section class="panel">
+      <h2>💻 Technology</h2>
       <ul>
         <li>AI / Cybersecurity</li>
-        <li>Data Centers</li>
         <li>Cloud Providers</li>
-        <li>Tech Labs</li>
+        <li>Data Centers</li>
+        <li>Tech Labs &amp; R&amp;D</li>
+        <li>Start-Ups &amp; Incubators</li>
       </ul>
+    </section>
 
-      <h2>Emergency Services</h2>
+    <!-- 11 — Emergency Services -->
+    <section class="panel">
+      <h2>🚑 Emergency Services</h2>
       <ul>
         <li>Fire Departments</li>
         <li>EMS</li>
+        <li>Search &amp; Rescue</li>
         <li>Disaster Response</li>
-        <li>Search & Rescue</li>
+        <li>911 Call Centers</li>
       </ul>
+    </section>
 
-      <h2>Retail & Fuel</h2>
+    <!-- 12 — Government -->
+    <section class="panel">
+      <h2>🏛️ Government</h2>
       <ul>
-        <li>Convenience Stores</li>
-        <li>Fuel Stations</li>
-        <li>Chain Stores</li>
-        <li>Franchise Operators</li>
+        <li>Municipal Offices</li>
+        <li>Court Systems</li>
+        <li>DMV / Licensing</li>
+        <li>Public Works</li>
       </ul>
-    </div>
-  </div>
+    </section>
+
+  </div><!-- /grid -->
 </body>
 </html>
