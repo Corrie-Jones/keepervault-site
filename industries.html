@@ -2,63 +2,146 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KeeperVault • Industry Selector</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pick Your Industry</title>
   <style>
-    body      {background:#0f0f0f;color:#e0e0e0;font-family:Segoe UI,Tahoma,sans-serif;text-align:center;padding:2rem;}
-    h1        {color:#8ab4ff;font-size:2rem;margin-bottom:1rem;}
-    .section  {margin:2rem 0 1rem;font-size:1.3rem;font-weight:700;color:#ffd080;}
-    ul        {list-style:none;padding:0;margin:0 auto;max-width:420px;}
-    li        {margin:0.5rem 0;}
-    a         {color:#e0e0e0;text-decoration:none;font-size:1.1rem;display:inline-block;padding:0.3rem 0.6rem;border-radius:4px;transition:background .2s;}
-    a:hover   {background:#222;}
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      text-align: center;
+      color: #4B0082;
+    }
+    .columns {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+    .column {
+      flex: 1;
+      min-width: 300px;
+      background: #fff;
+      padding: 1rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: #800080;
+      border-bottom: 2px solid #800080;
+      padding-bottom: 0.5rem;
+    }
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+    li::before {
+      content: "• ";
+      color: #800080;
+      font-weight: bold;
+    }
   </style>
 </head>
 <body>
-  <h1>Select Your Industry</h1>
+  <h1>Pick Your Industry</h1>
+  <div class="columns">
+    <div class="column">
+      <h2>Law Enforcement</h2>
+      <ul>
+        <li>Police Department</li>
+        <li>Sheriff’s Office</li>
+        <li>SWAT / Tactical</li>
+        <li>FBI</li>
+        <li>DOJ</li>
+        <li>DEA</li>
+        <li>Game Wardens</li>
+        <li>DOT Enforcement</li>
+      </ul>
 
-  <!-- === Law Enforcement & Security === -->
-  <div class="section">🚨 Law Enforcement & Security</div>
-  <ul>
-    <li><a href="police.html">👮 Police Departments</a></li>
-    <li><a href="sheriff.html">🚔 Sheriff’s Offices</a></li>
-    <li><a href="swat.html">🚨 SWAT / Tactical</a></li>
-    <li><a href="dot.html">🚛 DOT Enforcement</a></li>
-    <li><a href="fbi.html">🕵️ FBI</a></li>
-    <li><a href="dea.html">💊 DEA</a></li>
-  </ul>
+      <h2>Education</h2>
+      <ul>
+        <li>Public Schools</li>
+        <li>Charter Schools</li>
+        <li>Universities</li>
+        <li>Community Colleges</li>
+        <li>Trade Schools</li>
+      </ul>
 
-  <!-- === Healthcare === -->
-  <div class="section">🩺 Healthcare</div>
-  <ul>
-    <li><a href="hospitals.html">🏥 Hospitals</a></li>
-    <li><a href="home-health.html">🏠 Home Health</a></li>
-    <li><a href="va.html">🪖 VA Facilities</a></li>
-  </ul>
+      <h2>Healthcare</h2>
+      <ul>
+        <li>Hospitals</li>
+        <li>Home Health</li>
+        <li>Hospice</li>
+        <li>Nursing Homes</li>
+        <li>VA Facilities</li>
+        <li>Mental Health Centers</li>
+      </ul>
 
-  <!-- === Transportation & Infrastructure === -->
-  <div class="section">✈️ Transportation & Infrastructure</div>
-  <ul>
-    <li><a href="airports.html">✈️ Airports</a></li>
-    <li><a href="shipping.html">🚢 Shipping Ports</a></li>
-    <li><a href="trucking.html">🚚 Trucking Fleets</a></li>
-  </ul>
+      <h2>Transportation</h2>
+      <ul>
+        <li>Airports</li>
+        <li>Trucking Fleets</li>
+        <li>Rail Systems</li>
+        <li>Bus Lines</li>
+        <li>Logistics Hubs</li>
+      </ul>
 
-  <!-- === Intelligence / Defense / Cyber === -->
-  <div class="section">🎯 Strategic & Covert Systems</div>
-  <ul>
-    <li><a href="defense.html">🛡️ Defense Contractors</a></li>
-    <li><a href="intel.html">📡 Intelligence Ops</a></li>
-    <li><a href="cyber.html">💻 AI / Cybersecurity</a></li>
-  </ul>
+      <h2>Shipping</h2>
+      <ul>
+        <li>Shipping Yards</li>
+        <li>Ship Carriers</li>
+        <li>Container Ports</li>
+      </ul>
+    </div>
 
-  <!-- === Education === -->
-  <div class="section">📚 Education</div>
-  <ul>
-    <li><a href="universities.html">🧑‍🎓 Universities</a></li>
-    <li><a href="schools.html">🏫 Public Schools</a></li>
-  </ul>
+    <div class="column">
+      <h2>Government</h2>
+      <ul>
+        <li>Municipal Offices</li>
+        <li>Courts</li>
+        <li>DMV / Licensing</li>
+        <li>Public Works</li>
+      </ul>
 
-  <!-- Add new sections / lines anytime -->
+      <h2>Security & Defense</h2>
+      <ul>
+        <li>Military Bases</li>
+        <li>Defense Contractors</li>
+        <li>Private Security</li>
+        <li>Strategic & Covert Systems</li>
+        <li>National Guard</li>
+      </ul>
+
+      <h2>Technology</h2>
+      <ul>
+        <li>AI / Cybersecurity</li>
+        <li>Data Centers</li>
+        <li>Cloud Providers</li>
+        <li>Tech Labs</li>
+      </ul>
+
+      <h2>Emergency Services</h2>
+      <ul>
+        <li>Fire Departments</li>
+        <li>EMS</li>
+        <li>Disaster Response</li>
+        <li>Search & Rescue</li>
+      </ul>
+
+      <h2>Retail & Fuel</h2>
+      <ul>
+        <li>Convenience Stores</li>
+        <li>Fuel Stations</li>
+        <li>Chain Stores</li>
+        <li>Franchise Operators</li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
