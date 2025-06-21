@@ -4,140 +4,146 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Meet the KeeperVault Team</title>
+
   <style>
-    body {
-      background-color: #0f0f1a;
-      color: #c3a5ff;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      text-align: center;
-      padding: 20px;
+    /* ==========  GLOBAL  ========== */
+    body{
+      margin:0;
+      padding:20px;
+      font-family: Arial, sans-serif;
+      background:#0d0d1a;
+      color:#d7b6ff;          /* lilac-purple text */
+      text-align:center;
+    }
+    h1{color:#b97aff;margin-bottom:40px}
+
+    /* ==========  GRID  ========== */
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:25px;
+      max-width:1200px;
+      margin:0 auto;
     }
 
-    h1 {
-      color: #d6b3ff;
-      font-size: 2.5em;
-      margin-bottom: 40px;
+    /* ==========  CARD  ========== */
+    .card{
+      background:#1a1a2e;
+      border:2px solid #8d4dff;
+      border-radius:12px;
+      padding:18px;
+      box-shadow:0 0 12px #8d4dff55;
+      transition:transform .25s;
     }
+    .card:hover{transform:scale(1.05)}
 
-    .team-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 30px;
-      max-width: 1200px;
-      margin: 0 auto;
+    .card img{
+      width:110px;
+      height:110px;
+      object-fit:cover;
+      border-radius:50%;
+      border:3px solid #b97aff;
+      margin-bottom:12px;
     }
-
-    .card {
-      background-color: #1c1b29;
-      border-radius: 10px;
-      padding: 20px;
-      box-shadow: 0 0 10px #5e2f9c;
-      transition: transform 0.2s ease;
-    }
-
-    .card:hover {
-      transform: scale(1.05);
-    }
-
-    .card img {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      object-fit: cover;
-      border: 3px solid #b684ff;
-      margin-bottom: 15px;
-    }
-
-    .name {
-      font-weight: bold;
-      font-size: 1.2em;
-      color: #e3c4ff;
-    }
-
-    .title {
-      font-size: 0.95em;
-      color: #b58dff;
-    }
-
-    footer {
-      margin-top: 40px;
-      font-size: 0.8em;
-      color: #888;
-    }
+    .name{font-weight:bold;font-size:1.15rem;color:#f1e1ff}
+    .role{font-size:.9rem;color:#caa6ff}
   </style>
 </head>
+
 <body>
   <h1>Meet the KeeperVault Team</h1>
-  <div class="team-grid">
+
+  <div class="grid">
+    <!-- 1 -->
     <div class="card">
-      <img src="daisy-vale.png" alt="Daisy Vale" />
-      <div class="name">Daisy Vale</div>
-      <div class="title">Executive Secretary</div>
-    </div>
-    <div class="card">
-      <img src="sage-jones.png" alt="Sage Jones" />
-      <div class="name">Sage Jones</div>
-      <div class="title">Human Resources Director</div>
-    </div>
-    <div class="card">
-      <img src="thistle-jones.png" alt="Thistle Jones" />
-      <div class="name">Thistle Jones</div>
-      <div class="title">Arts & Graphic Design Director</div>
-    </div>
-    <div class="card">
-      <img src="valor-jones.png" alt="Valor Jones" />
-      <div class="name">Valor Jones</div>
-      <div class="title">Security Director</div>
-    </div>
-    <div class="card">
-      <img src="rowen-votaw.png" alt="Rowan Votaw" />
-      <div class="name">Rowan Votaw</div>
-      <div class="title">Director of Administration</div>
-    </div>
-    <div class="card">
-      <img src="corrie-votaw.png" alt="Corrie Votaw" />
+      <img src="corrie-votaw.png" alt="Corrie Votaw">
       <div class="name">Corrie Votaw</div>
-      <div class="title">Chief Operations Officer</div>
+      <div class="role">Founder &amp; COO</div>
     </div>
+
+    <!-- 2 -->
     <div class="card">
-      <img src="merlin-votaw.png" alt="Merlin Votaw" />
+      <img src="merlin-votaw.png" alt="Merlin Votaw">
       <div class="name">Merlin Votaw</div>
-      <div class="title">Chief Technology Officer</div>
+      <div class="role">Chief Technology Officer</div>
     </div>
+
+    <!-- 3 -->
     <div class="card">
-      <img src="marigold-vale.png" alt="Marigold Vale" />
+      <img src="rowen-votaw.png" alt="Rowan Votaw">
+      <div class="name">Rowan Votaw</div>
+      <div class="role">Director of Administration</div>
+    </div>
+
+    <!-- 4 -->
+    <div class="card">
+      <img src="daisy-vale.png" alt="Daisy Vale">
+      <div class="name">Daisy Vale</div>
+      <div class="role">Executive Secretary</div>
+    </div>
+
+    <!-- 5 -->
+    <div class="card">
+      <img src="marigold-vale.png" alt="Marigold Vale">
       <div class="name">Marigold Vale</div>
-      <div class="title">Grant Specialist</div>
+      <div class="role">Grant Specialist</div>
     </div>
+
+    <!-- 6 -->
     <div class="card">
-      <img src="monroe-harris.png" alt="Monroe Harris" />
-      <div class="name">Monroe Harris</div>
-      <div class="title">AKA Mini Me</div>
+      <img src="thistle-jones.png" alt="Thistle Jones">
+      <div class="name">Thistle Jones</div>
+      <div class="role">Creative Arts Director</div>
     </div>
+
+    <!-- 7 -->
     <div class="card">
-      <img src="wren-meldrum.png" alt="Wren Meldrum" />
-      <div class="name">Wren Meldrum</div>
-      <div class="title">Communications Director</div>
+      <img src="valor-jones.png" alt="Valor Jones">
+      <div class="name">Valor Jones</div>
+      <div class="role">Security Director</div>
     </div>
+
+    <!-- 8 -->
     <div class="card">
-      <img src="sierra-kates.png" alt="Sierra Kates" />
-      <div class="name">Sierra Kates</div>
-      <div class="title">Inventory & Quality Control Officer</div>
-    </div>
-    <div class="card">
-      <img src="moroni-lowe.png" alt="Moroni Lowe" />
+      <img src="moroni-lowe.png" alt="Moroni Lowe">
       <div class="name">Moroni Lowe</div>
-      <div class="title">Enforcement Director</div>
+      <div class="role">Enforcement Director</div>
     </div>
+
+    <!-- 9 -->
     <div class="card">
-      <img src="coda-smith.png" alt="Coda Smith" />
+      <img src="sage-jones.png" alt="Sage Jones">
+      <div class="name">Sage Jones</div>
+      <div class="role">Human Resources</div>
+    </div>
+
+    <!-- 10 -->
+    <div class="card">
+      <img src="sierra-kates.png" alt="Sierra Kates">
+      <div class="name">Sierra Kates</div>
+      <div class="role">Inventory &amp; QC Officer</div>
+    </div>
+
+    <!-- 11 -->
+    <div class="card">
+      <img src="monroe-harris.png" alt="Monroe Harris">
+      <div class="name">Monroe Harris (“Mini Me”)</div>
+      <div class="role">Assistant Ops Chief</div>
+    </div>
+
+    <!-- 12 -->
+    <div class="card">
+      <img src="wren-meldrum.png" alt="Wren Meldrum">
+      <div class="name">Wren Meldrum</div>
+      <div class="role">Communications Director</div>
+    </div>
+
+    <!-- 13 -->
+    <div class="card">
+      <img src="coda-smith.png" alt="Coda Smith">
       <div class="name">Coda Smith</div>
-      <div class="title">Chief Branding Officer</div>
+      <div class="role">Chief Tech Officer</div>
     </div>
   </div>
-
-  <footer>
-    &copy; 2025 The KeeperVault. All rights reserved.
-  </footer>
 </body>
 </html>
