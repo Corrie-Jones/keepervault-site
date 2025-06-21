@@ -3,148 +3,151 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Meet the KeeperVault Team</title>
+  <title>Meet the Team | KeeperVault</title>
   <style>
     body {
-      background-color: #0b0f1a;
+      background: #0d0d1a;
+      color: white;
       font-family: Arial, sans-serif;
-      color: #ffffff;
       text-align: center;
+      margin: 0;
+      padding: 0;
     }
     h1 {
-      color: #a6b0ff;
-      margin-top: 30px;
+      color: #66ccff;
+      margin-top: 40px;
     }
-    .team-container {
+    .team-grid {
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      padding: 30px;
+      margin: 40px auto;
+      max-width: 1200px;
     }
-    .member {
-      background-color: #1a1f2e;
-      border: 2px solid #3c47a0;
-      border-radius: 15px;
+    .card {
+      background: #1a1a2e;
+      border: 2px solid #333366;
+      border-radius: 12px;
       margin: 15px;
-      padding: 20px;
-      width: 200px;
-      box-shadow: 0 0 10px #5c6fff;
+      padding: 15px;
+      width: 220px;
+      box-shadow: 0 0 10px #000;
+      transition: transform 0.3s;
     }
-    .member img {
-      width: 100%;
-      height: auto;
-      border-radius: 10px;
+    .card:hover {
+      transform: scale(1.05);
+    }
+    .card img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
       margin-bottom: 10px;
     }
-    .member h2 {
-      margin: 10px 0 5px 0;
+    .name {
+      font-weight: bold;
       font-size: 18px;
-      color: #a6b0ff;
+      color: #66ccff;
     }
-    .member p {
+    .title {
       font-size: 14px;
-      color: #e0e0e0;
+      color: #ccc;
     }
     footer {
       margin-top: 40px;
-      font-size: 12px;
-      color: #888;
-    }
-    .nav-buttons {
-      margin-top: 30px;
-    }
-    .nav-buttons a {
-      color: #fff;
-      background-color: #3c47a0;
-      padding: 10px 20px;
-      margin: 0 10px;
-      border-radius: 8px;
-      text-decoration: none;
-      box-shadow: 0 0 6px #5c6fff;
-    }
-    .nav-buttons a:hover {
-      background-color: #5c6fff;
+      padding: 20px;
+      background-color: #111122;
+      color: #999;
     }
   </style>
 </head>
 <body>
+
   <h1>Meet the KeeperVault Team</h1>
+  <div class="team-grid">
+    
+    <div class="card">
+      <img src="daisy-vale.png" alt="Daisy Vale">
+      <div class="name">Daisy Vale</div>
+      <div class="title">Executive Secretary</div>
+    </div>
 
-  <div class="team-container">
-    <div class="member">
-      <img src="daisy-vale.jpg" alt="Daisy Vale">
-      <h2>Daisy Vale</h2>
-      <p>Executive Secretary</p>
+    <div class="card">
+      <img src="sage-jones.png" alt="Sage Jones">
+      <div class="name">Sage Jones</div>
+      <div class="title">Human Resources Director</div>
     </div>
-    <div class="member">
-      <img src="sage-jones.jpg" alt="Sage Jones">
-      <h2>Sage Jones</h2>
-      <p>Human Resources Director</p>
-    </div>
-    <div class="member">
-      <img src="thistle-jones.jpg" alt="Thistle Jones">
-      <h2>Thistle Jones</h2>
-      <p>Arts & Graphic Design Director</p>
-    </div>
-    <div class="member">
-      <img src="valor-jones.jpg" alt="Valor Jones">
-      <h2>Valor Jones</h2>
-      <p>Security Director</p>
-    </div>
-    <div class="member">
-      <img src="rowan-votaw.jpg" alt="Rowan Votaw">
-      <h2>Rowan Votaw</h2>
-      <p>Director of Administration</p>
-    </div>
-    <div class="member">
-      <img src="corrie-votaw.jpg" alt="Corrie Votaw">
-      <h2>Corrie Votaw</h2>
-      <p>Chief Operations Officer</p>
-    </div>
-    <div class="member">
-      <img src="merlin-votaw.jpg" alt="Merlin Votaw">
-      <h2>Merlin Votaw</h2>
-      <p>Chief Technology Officer</p>
-    </div>
-    <div class="member">
-      <img src="marigold-vale.jpg" alt="Marigold Vale">
-      <h2>Marigold Vale</h2>
-      <p>Grant Specialist</p>
-    </div>
-    <div class="member">
-      <img src="mini-me.jpg" alt="Monroe Harris">
-      <h2>Monroe Harris</h2>
-      <p>AKA Mini Me</p>
-    </div>
-    <div class="member">
-      <img src="wren-meldrum.jpg" alt="Wren Meldrum">
-      <h2>Wren Meldrum</h2>
-      <p>Communications Director</p>
-    </div>
-    <div class="member">
-      <img src="sierra-kates.jpg" alt="Sierra Kates">
-      <h2>Sierra Kates</h2>
-      <p>Inventory & Quality Control Officer</p>
-    </div>
-    <div class="member">
-      <img src="moroni-lowe.jpg" alt="Moroni Lowe">
-      <h2>Moroni Lowe</h2>
-      <p>Enforcement Director</p>
-    </div>
-    <div class="member">
-      <img src="coda-smith.jpg" alt="Coda Smith">
-      <h2>Coda Smith</h2>
-      <p>Chief Technology Officer</p>
-    </div>
-  </div>
 
-  <div class="nav-buttons">
-    <a href="index.html">← Back to Home</a>
-    <a href="industries.html">View Industries →</a>
+    <div class="card">
+      <img src="thistle-jones.png" alt="Thistle Jones">
+      <div class="name">Thistle Jones</div>
+      <div class="title">Arts & Graphic Design Director</div>
+    </div>
+
+    <div class="card">
+      <img src="valor-jones.png" alt="Valor Jones">
+      <div class="name">Valor Jones</div>
+      <div class="title">Security Director</div>
+    </div>
+
+    <div class="card">
+      <img src="rowen-votaw.png" alt="Rowan Votaw">
+      <div class="name">Rowan Votaw</div>
+      <div class="title">Director of Administration</div>
+    </div>
+
+    <div class="card">
+      <img src="corrie-votaw.png" alt="Corrie Votaw">
+      <div class="name">Corrie Votaw</div>
+      <div class="title">Chief Operations Officer</div>
+    </div>
+
+    <div class="card">
+      <img src="merlin-votaw.png" alt="Merlin Votaw">
+      <div class="name">Merlin Votaw</div>
+      <div class="title">Chief Technology Officer</div>
+    </div>
+
+    <div class="card">
+      <img src="marigold-vale.png" alt="Marigold Vale">
+      <div class="name">Marigold Vale</div>
+      <div class="title">Grant Specialist</div>
+    </div>
+
+    <div class="card">
+      <img src="monroe-harris.png" alt="Monroe Harris">
+      <div class="name">Monroe Harris</div>
+      <div class="title">AKA Mini Me</div>
+    </div>
+
+    <div class="card">
+      <img src="wren-meldrum.png" alt="Wren Meldrum">
+      <div class="name">Wren Meldrum</div>
+      <div class="title">Communications Director</div>
+    </div>
+
+    <div class="card">
+      <img src="sierra-kates.png" alt="Sierra Kates">
+      <div class="name">Sierra Kates</div>
+      <div class="title">Inventory & Quality Control Officer</div>
+    </div>
+
+    <div class="card">
+      <img src="moroni-lowe.png" alt="Moroni Lowe">
+      <div class="name">Moroni Lowe</div>
+      <div class="title">Enforcement Director</div>
+    </div>
+
+    <div class="card">
+      <img src="coda-smith.png" alt="Coda Smith">
+      <div class="name">Coda Smith</div>
+      <div class="title">Chief Leadership Officer</div>
+    </div>
+
   </div>
 
   <footer>
-    <p>© 2025 The KeeperVault. All rights reserved.</p>
+    &copy; 2025 The KeeperVault. All rights reserved.
   </footer>
 </body>
 </html>
