@@ -1,84 +1,26 @@
-<!DOCTYPE html><html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KeeperVault Access Request</title>
-  <style>
-    body {
-      background-color: #0c0c0c;
-      color: #e0e0e0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      text-align: center;
-      padding: 40px;
-    }
-    .container {
-      max-width: 600px;
-      margin: auto;
-      background: rgba(30,30,30,0.85);
-      padding: 40px;
-      border-radius: 12px;
-      box-shadow: 0 0 12px #2d2d2d;
-    }
-    h1 {
-      font-size: 28px;
-      color: #f7c600;
-      margin-bottom: 20px;
-    }
-    p {
-      margin-bottom: 24px;
-      font-size: 16px;
-      color: #cccccc;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-    }
-    input, textarea {
-      padding: 10px;
-      margin-bottom: 18px;
-      border-radius: 6px;
-      border: 1px solid #555;
-      background-color: #1a1a1a;
-      color: #f5f5f5;
-    }
-    button {
-      padding: 12px;
-      background-color: #f7c600;
-      border: none;
-      color: #000;
-      font-weight: bold;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #d6aa00;
-    }
-    .footer {
-      font-size: 12px;
-      margin-top: 20px;
-      color: #666;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <h1>🛡️ ACCESS REQUEST: RESTRICTED ZONE</h1>
-    <p>
-      So you made it this far…<br>
-      But there’s no guarantee you go further.
-    </p>
-    <p>
-      To request deeper access into KeeperVault's classified systems,<br>
-      enter your information below. Daisy will review and determine clearance.
-    </p>
-    <form action="https://formspree.io/f/moqgpqok" method="POST">
-      <input type="text" name="name" placeholder="Your Full Name" required>
-      <input type="email" name="email" placeholder="Your Email Address" required>
-      <input type="text" name="company" placeholder="Company / Affiliation" required>
-      <textarea name="reason" placeholder="Reason for Access Request" rows="5" required></textarea>
-      <button type="submit">REQUEST ACCESS</button>
-    </form>
-    <p class="footer">All requests are logged and reviewed by KeeperVault Security. Unauthorized access attempts will be ignored.</p>
-  </div>
-</body>
-</html>
+<form
+  action="https://formsubmit.io/send/daisy.thekeepervault@gmail.com"
+  method="POST"
+  style="max-width: 600px; margin: auto; background-color: #111; padding: 20px; border: 2px solid #7a5fca; border-radius: 15px; color: white; font-family: sans-serif;"
+>
+  <h2 style="text-align: center; margin-bottom: 20px;">🔐 KeeperVault Access Request</h2>
+
+  <label>Full Name</label><br />
+  <input type="text" name="Name" required style="width: 100%; padding: 8px; margin-bottom: 10px;" /><br />
+
+  <label>Business or Organization</label><br />
+  <input type="text" name="Business" required style="width: 100%; padding: 8px; margin-bottom: 10px;" /><br />
+
+  <label>Email Address</label><br />
+  <input type="email" name="Email" required style="width: 100%; padding: 8px; margin-bottom: 10px;" /><br />
+
+  <label>Why are you requesting access?</label><br />
+  <textarea name="Reason" required style="width: 100%; padding: 8px; margin-bottom: 10px; height: 100px;"></textarea><br />
+
+  <label>Additional Notes (Optional)</label><br />
+  <textarea name="Notes" style="width: 100%; padding: 8px; margin-bottom: 20px; height: 80px;"></textarea><br />
+
+  <button type="submit" style="width: 100%; background-color: #7a5fca; color: white; padding: 10px; border: none; border-radius: 10px; font-size: 16px;">
+    Request Access
+  </button>
+</form>
