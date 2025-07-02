@@ -1,0 +1,88 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gateway 2 - Human Verification</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: #0f0f0f;
+      color: #e0e0e0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      text-align: center;
+      padding: 2em;
+    }
+    h1 {
+      font-size: 2.5em;
+      color: #a491ff;
+    }
+    form {
+      max-width: 600px;
+      margin: 2em auto;
+      background: #1a1a1a;
+      padding: 2em;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(164, 145, 255, 0.3);
+    }
+    label {
+      display: block;
+      text-align: left;
+      margin-top: 1em;
+      font-weight: bold;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 0.8em;
+      margin-top: 0.3em;
+      border: none;
+      border-radius: 5px;
+      background-color: #2a2a2a;
+      color: #fff;
+    }
+    .hidden {
+      display: none;
+    }
+    button {
+      margin-top: 2em;
+      padding: 1em 2em;
+      font-size: 1em;
+      background-color: #7e4ef5;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #6335c8;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔐 GATEWAY 2: HUMAN VERIFICATION</h1>
+  <p>Think you're ready for what's next? Prove you're human.</p>
+  <form action="https://formspree.io/f/mwkgbqnj" method="POST">
+    <label for="name">Full Name</label>
+    <input type="text" name="name" id="name" required><label for="email">Email Address</label>
+<input type="email" name="email" id="email" required>
+
+<label for="access-code">Access Code or Keyword</label>
+<input type="text" name="access-code" id="access-code" required>
+
+<label for="reason">Reason You Want Access</label>
+<textarea name="reason" id="reason" rows="4" required></textarea>
+
+<!-- Honeypot Field -->
+<div class="hidden">
+  <label for="robot">Leave this field empty</label>
+  <input type="text" name="robot" id="robot">
+</div>
+
+<!-- Puzzle Question -->
+<label for="riddle">What color is the KeeperVault shield?</label>
+<input type="text" name="riddle" id="riddle" required>
+
+<button type="submit">Submit Gateway Challenge</button>
+
+  </form>
+</body>
+</html>
