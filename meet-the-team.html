@@ -151,6 +151,19 @@
       <div class="role">Chief Tech Officer</div>
     </div>
   </div>
-  
+<!-- Page Tracker: Meet the Team -->
+<script>
+  fetch("https://keepervault-visitorlog.onrender.com/log", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      page: "Meet the Team",
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent
+    })
+  });
+</script>  
 </body>
 </html>
