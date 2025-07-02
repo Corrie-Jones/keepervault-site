@@ -37,5 +37,19 @@
   <header>KEEPERVAULT</header>
   <img src="skull-crossbones.png" alt="Wrong Key Skull">
   <div class="message">Wrong Key</div>
+  <!-- Page Tracker: Wrong Key -->
+<script>
+  fetch("https://keepervault-visitorlog.onrender.com/log", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      page: "Wrong Key",
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent
+    })
+  });
+</script>
 </body>
 </html>
