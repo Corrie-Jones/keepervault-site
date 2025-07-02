@@ -24,3 +24,17 @@
     Request Access
   </button>
 </form>
+<!-- Page Tracker: Access Form (Gateway 1) -->
+<script>
+  fetch("https://keepervault-visitorlog.onrender.com/log", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      page: "Access Form (Gateway 1)",
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent
+    })
+  });
+</script>
