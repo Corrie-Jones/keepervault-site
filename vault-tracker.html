@@ -2,46 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Vault Tracker</title>
   <style>
     body {
-      background-color: #341F74;
+      background-color: #2e1367;
       color: white;
       font-family: Arial, sans-serif;
+      padding: 40px;
       text-align: center;
-      padding-top: 50px;
     }
     h1 {
-      font-size: 3em;
       margin-bottom: 20px;
+      font-size: 2.2em;
+      text-transform: uppercase;
     }
-    #counter {
-      font-size: 2em;
+    .log {
+      background: #43267c;
+      padding: 20px;
+      border-radius: 12px;
+      display: inline-block;
       margin-top: 20px;
+      text-align: left;
     }
-    img {
-      margin-top: 30px;
-      width: 220px;
-      height: auto;
-      border: 8px solid white;
-      border-radius: 10px;
+    .log-entry {
+      font-size: 1.1em;
+      margin: 8px 0;
     }
   </style>
 </head>
 <body>
-  <h1>VAULT TRACKER</h1>
-  <p>This page has been opened on this device:</p>
-  <div id="counter">0 times</div>
-
-  <img src="vault-tracker-logo.png" alt="Vault QR" />
+  <h1>Vault Tracker</h1>
+  <div class="log" id="visitLog">
+    <div class="log-entry">Loading tracker...</div>
+  </div>
 
   <script>
-    // Simple local counter (per user/browser)
-    let views = localStorage.getItem("vaultTrackerViews") || 0;
-    views++;
-    localStorage.setItem("vaultTrackerViews", views);
-    document.getElementById("counter").textContent = views + " time" + (views == 1 ? "" : "s");
+    async function loadVisitData() {
+      try {
+        const response = await fetch('tracker.json');
+        const data = await response.json();
+
+        const logContainer = document.getElementById('visitLog');
+        logContainer.innerHTML = '';
+
+        Object.entries(data).forEach(([page, count]) => {
+          const entry = document.createElement('div');
+          entry.className = 'log-entry';
+          entry.textContent = `${page}: ${count} visits`;
+          logContainer.appendChild(entry);
+        });
+      } catch (err) {
+        document.getElementById('visitLog').innerHTML = '<div class="log-entry">Tracker file missing or unreadable.</div>';
+      }
+    }
+
+    loadVisitData();
   </script>
 </body>
 </html>
