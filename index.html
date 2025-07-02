@@ -92,7 +92,20 @@
 </nav>
 
 
- 
+<!-- Page Tracker: Homepage -->
+<script>
+  fetch("https://keepervault-visitorlog.onrender.com/log", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      page: "Homepage",
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent
+    })
+  });
+</script> 
 </body>
 </html>
     .
