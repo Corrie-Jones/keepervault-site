@@ -84,5 +84,19 @@
 <button type="submit">Submit Gateway Challenge</button>
 
   </form>
+  <!-- Page Tracker: Gateway 2 -->
+<script>
+  fetch("https://keepervault-visitorlog.onrender.com/log", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json"
+    },
+    body: JSON.stringify({
+      page: "Gateway 2",
+      timestamp: new Date().toISOString(),
+      userAgent: navigator.userAgent
+    })
+  });
+</script>
 </body>
 </html>
